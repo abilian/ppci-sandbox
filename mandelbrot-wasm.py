@@ -1,6 +1,6 @@
-"""
-Simplified version of mandelbrot.py that can be compiled to WASM by PPCI.
-"""
+#"""
+#Simplified version of mandelbrot.py that can be compiled to WASM by PPCI.
+#"""
 
 def mandelbrot() -> int:
     j = 0
