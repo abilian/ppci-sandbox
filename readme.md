@@ -2,6 +2,15 @@ Sandbox for experimenting with PPCI
 ===================================
 
 
+Note: The ppci (pure python compiler infrastructure) project is a compiler written entirely in python.
+
+
+More info:
+
+- <https://github.com/windelbouwman/ppci>
+- <https://ppci.readthedocs.io/en/latest/>
+
+
 ## 1) Install:
 
 ```
