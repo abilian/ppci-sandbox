@@ -15,7 +15,10 @@ poetry install
 python mandelbrot-jit.py
 ```
 
-(Won't work on a Mac.)
+Speed gain seems to be ~15.
+
+
+(Won't work on a Mac, unless you apply this patch: <https://github.com/sfermigier/ppci/commit/805b>)
 
 ## 3) Compile examples to WASM and IR:
 
