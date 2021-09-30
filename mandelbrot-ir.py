@@ -1,3 +1,9 @@
+"""
+Version of mandelbrot.py that can be compiled to IR by PPCI.
+
+Top-level statements had to be commented out.
+"""
+
 # ITERATIONS = 100
 # EXPECTED = 8939
 

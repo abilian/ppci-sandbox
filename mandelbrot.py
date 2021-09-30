@@ -1,3 +1,7 @@
+"""
+Original mandelbrot program.
+"""
+
 def mandelbrot() -> int:
     j = 0
     while j < 100:

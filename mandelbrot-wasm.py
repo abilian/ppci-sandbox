@@ -1,3 +1,7 @@
+"""
+Simplified version of mandelbrot.py that can be compiled to WASM by PPCI.
+"""
+
 def mandelbrot() -> int:
     j = 0
     while j < 100:

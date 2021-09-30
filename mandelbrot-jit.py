@@ -1,3 +1,11 @@
+"""
+JIT-able version of mandelbrot.py
+
+Can be run from Python as long as PPCI is installed.
+
+Includes some benchmarks.
+"""
+
 import time
 from typing import Callable
 
@@ -55,15 +63,6 @@ def mandelbrot() -> int:
     return count
 
 
-mandelbrot_nojit = mandelbrot
-
-t0 = time.time()
-mandelbrot_jit = jit(mandelbrot)
-mandelbrot_jit.__name__ = "mandelbrot_jit"
-t1 = time.time()
-print(f"Compilation time: {t1-t0}")
-
-
 def run_with_timer(f: Callable):
     print(f"Running: {f.__name__}")
     t0 = time.time()
@@ -76,8 +75,18 @@ def run_with_timer(f: Callable):
 
 
 def main():
+    mandelbrot_nojit = mandelbrot
+
+    t0 = time.time()
+    mandelbrot_jit = jit(mandelbrot)
+    mandelbrot_jit.__name__ = "mandelbrot_jit"
+    t1 = time.time()
+    print(f"Compilation time: {t1-t0}")
+    print()
+
     run_with_timer(mandelbrot_nojit)
     run_with_timer(mandelbrot_jit)
 
 
-main()
+if __name__ == '__main__':
+    main()
